@@ -134,9 +134,6 @@ struct ContentView: View {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Text("둘러보기")
                             .font(.system(size: 34, weight: .bold))
-//                            .padding([.top], 60)
-//                            .padding([.bottom], 30)
-                            
                     }
                 }
             }
@@ -164,12 +161,6 @@ struct CardView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(20)
-                
-                
-//                RoundedRectangle(cornerRadius: 20)
-//                    .mask(LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.5), Color.black.opacity(0)]),
-//                                         startPoint: .bottom, endPoint: .center))
-//                    .frame(width: 350, height: 200)
                 
 
                 VStack(alignment: .leading) {

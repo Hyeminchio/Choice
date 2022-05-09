@@ -29,7 +29,6 @@ struct SongListView: View {
         }
         .padding(.leading, 20)
         .padding(.trailing, 20)
-//        .offset(y: -40)
     }
 }
 
@@ -40,13 +39,11 @@ struct ListView: View {
     var img = Image("Card0")
     var listName = "A-List"
     
-//    //1.링크
+
         @Environment(\.openURL) var openURL
 
     
     var body: some View {
-//        NavigationView {
-        
             ScrollView {
                 
                 
@@ -56,17 +53,7 @@ struct ListView: View {
                         img
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                        
-//     //1.버튼을 만들어주고
-//                         Button("a-list") {
-//
-//                             //openURL을 추가해준다.
-//                             openURL(URL(string: "https://music.apple.com/kr/playlist/a-list/pl.u-kv9l0gVuX7bvek")!)
-//                         }
-                        
                     }
-                    
-                    
                     .offset(y:-100)
                     
                     ForEach(songList, id: \.self){ song in
@@ -77,7 +64,7 @@ struct ListView: View {
                 }
                 
             }.navigationBarTitle(Text(listName))
-            //공유버튼
+
             .navigationBarItems(trailing:
                         HStack {
                             Button(action: {
@@ -86,45 +73,8 @@ struct ListView: View {
                                     }
                             }) {
                                 Image(systemName: "link")
-                                
-                                
                             }
-                
                         })
-
-        
-
-            
-        
-        
-            
-            
-        
-        
-            
-//            .navigationBarTitleDisplayMode(.inline)
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarLeading) {
-//
-//                    Button {
-//                        //Back Button
-//
-//
-//                    } label: {
-//                        Image(systemName: "chevron.backward")
-////                            .foregroundColor(.white)
-//                    }
-//                }
-//                ToolbarItem(placement: .principal) {
-//                    Text(listName)
-////                        .foregroundColor(Color.white)
-//                        .font(.system(size: 22, weight: .semibold))
-//                }
-//            }
-//        }
-//        .navigationBarHidden(true)
-//        .navigationBarBackButtonHidden(false)
-        
     }
 }
 
